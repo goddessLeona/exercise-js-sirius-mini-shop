@@ -4,8 +4,6 @@ const potato = document.createElement("h3");
 potato.innerText = "Potato";
 
 const tShirt1 = document.querySelector(".art-1");
-console.log(tShirt1)
-
 const oldh3 = document.querySelector("h3")
 
 tShirt1.replaceChild(potato, oldh3);
@@ -14,17 +12,21 @@ tShirt1.replaceChild(potato, oldh3);
 
 
 const navmeny = document.querySelector("nav");
-console.log(navmeny);
-
-const oldAtag = document.querySelector("a")
+navmeny.removeChild(navmeny.firstElementChild);
 
 const menyA = navmeny.innerHTML;
 const newAtag = `<a href="#">Start</a>`;
-console.log(newAtag)
+
+navmeny.insertAdjacentHTML("afterbegin", newAtag);
 
 
 
-//navmeny.insertAdjacentHTML("beforeend", newAtag);
-//console.log(navmeny)
-//navmeny.remove(navmeny.firstElementChild)
+// Uppgift 3: Byt namn på Contact till Mail Us.
+
+// Uppgift 4: Byt ut informationen om Sinus Hoodie - Fire.
+
+const tShirt2 = document.querySelector(".art-2");
+
+const newText = document.createElement("p");
+newText.innerText = "This is a very red T-shirt that fit every one that like red"
 
