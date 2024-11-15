@@ -14,19 +14,24 @@ tShirt1.replaceChild(potato, oldh3);
 const navmeny = document.querySelector("nav");
 navmeny.removeChild(navmeny.firstElementChild);
 
-const menyA = navmeny.innerHTML;
+//const menyA = navmeny.innerHTML;
 const newAtag = `<a href="#">Start</a>`;
 
 navmeny.insertAdjacentHTML("afterbegin", newAtag);
 
-
-
 // Uppgift 3: Byt namn på Contact till Mail Us.
+
+const mailAtag = `<a href="#">Mail Us</a>`;
 
 // Uppgift 4: Byt ut informationen om Sinus Hoodie - Fire.
 
 const tShirt2 = document.querySelector(".art-2");
+const allPtagar = document.querySelectorAll("p");
+const secondP = allPtagar[1];
 
 const newText = document.createElement("p");
 newText.innerText = "This is a very red T-shirt that fit every one that like red"
 
+tShirt2.replaceChild(newText, secondP);
+
+// Uppgift 5: Byt bakgrundsfärg och text på en knapp.
