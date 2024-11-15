@@ -18,16 +18,10 @@ const newAtag = `<a href="#">Start</a>`;
 
 navmeny.insertAdjacentHTML("afterbegin", newAtag);
 
-// Uppgift 3: Byt namn på Contact till Mail Us. ?????
-
-const mailAtag = `<a href="#">Mail Us</a>`;
+// Uppgift 3: Byt namn på Contact till Mail Us. (fick hjälp)
 
 const allAtagars = document.querySelectorAll("a");
-const atagNr2 = allAtagars[2];
-
-
-
-
+allAtagars[2].innerText = " Mail Us"
 
 
 // Uppgift 4: Byt ut informationen om Sinus Hoodie - Fire.
@@ -71,7 +65,10 @@ const newAddress = `<p> Sinus Skateboards <br> Någonstans 45 <br> Någonstans m
 
 newArticale.insertAdjacentHTML("beforeend", newAddress);
 
-// Uppgift 8: Byt färg på samtliga <p>.
+// Uppgift 8: Byt färg på samtliga <p>. (fick hjälp)
 
 const colorPtag = document.querySelectorAll("p");
-colorPtag.style.color = "green";
+
+colorPtag.forEach((item) =>{
+    item.style.color = "green"
+})
