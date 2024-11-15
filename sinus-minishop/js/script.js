@@ -61,3 +61,17 @@ const newFigure = oldImage [0];
 newFigure.style.backgroundColor = "pink";
 
 // Uppgift 7: Byt ut adressen på sidan.
+
+const oldArtical = document.querySelectorAll("article");
+const newArticale = oldArtical [4];
+
+newArticale.removeChild(newArticale. lastElementChild)
+
+const newAddress = `<p> Sinus Skateboards <br> Någonstans 45 <br> Någonstans malmö </p> `
+
+newArticale.insertAdjacentHTML("beforeend", newAddress);
+
+// Uppgift 8: Byt färg på samtliga <p>.
+
+const colorPtag = document.querySelectorAll("p");
+colorPtag.style.color = "green";
