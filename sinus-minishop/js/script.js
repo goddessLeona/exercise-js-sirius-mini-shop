@@ -72,3 +72,49 @@ const colorPtag = document.querySelectorAll("p");
 colorPtag.forEach((item) =>{
     item.style.color = "green"
 })
+
+// Uppgift 9: Ändra text på samtliga knappar till add to cart. (fick hjälp)
+
+const allButtons = document.querySelectorAll("button");
+
+allButtons.forEach((button) =>{
+    button.innerText = "Add to cart"
+})
+
+// Uppgift 10: Lägg till classen active på menyalternativet home.
+
+const atagHome = allAtagars[3];
+atagHome.setAttribute("class", "active");
+
+// Uppgifte 11: Ta bort classen logo på logotypen.
+
+const logo = document.querySelector(".logo");
+const classes = logo.classList;// do not know how to use, so used other option
+
+logo.removeAttribute("class", "logo");
+
+// Uppgift 12: Lägg till ett nytt menyalternativ.
+
+const allArticales = document.querySelectorAll("article");
+const Menyarticale = allArticales[3];
+
+const extraTreats = document.createElement("a");
+extraTreats.innerText = "Extra treats";
+
+Menyarticale.insertAdjacentElement("beforeend", extraTreats)
+
+
+// Uppgift 13: Lägg till en ny produkt med följande info.
+
+const newArticaleTshirt = document.createElement("article");
+const mains = document.querySelector("main");
+
+newArticaleTshirt.setAttribute("class", "art-4");
+mains.insertAdjacentElement("beforeend", newArticaleTshirt);
+
+const newTshirtInfo = document.querySelector(".art-4");
+
+newpruduct = `<figure><img src="img/hoodie-forrest.png" alt="hoodie4"></figure><h2>Sinus hoodie</h2><h3>Forest</h3><p>A green forest t-shir to wear when you like to melt in with the forest...</p><button>Add to cart</button>`;
+newTshirtInfo.insertAdjacentHTML("afterbegin", newpruduct);
+
+// Uppgift 14 :Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
