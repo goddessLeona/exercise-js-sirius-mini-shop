@@ -125,7 +125,7 @@ console.log("found you !")
 })
 
 // Uppgift 15: Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du 
-// console.log:a "Hi, Im article Fire / Ash / Water".
+// console.log:a "Hi, Im article Fire / Ash / Water". (fick hjälp)
 
 const allTshirtss = document.querySelectorAll("article");
 
