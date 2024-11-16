@@ -91,7 +91,7 @@ atagHome.setAttribute("class", "active");
 const logo = document.querySelector(".logo");
 const classes = logo.classList;// do not know how to use, so used other option
 
-logo.removeAttribute("class", "logo");
+//logo.removeAttribute("class", "logo");
 
 // Uppgift 12: Lägg till ett nytt menyalternativ.
 
@@ -118,3 +118,36 @@ newpruduct = `<figure><img src="img/hoodie-forrest.png" alt="hoodie4"></figure><
 newTshirtInfo.insertAdjacentHTML("afterbegin", newpruduct);
 
 // Uppgift 14 :Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
+
+const clickLogo = document.querySelector(".logo");
+clickLogo.addEventListener("click", function () {
+console.log("found you !")
+})
+
+// Uppgift 15: Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du 
+// console.log:a "Hi, Im article Fire / Ash / Water".
+
+const allTshirtss = document.querySelectorAll("article");
+
+const tshirts1234 = [allTshirtss[0], allTshirtss[1], allTshirtss[2], allTshirtss[3]]
+
+allTshirtss.forEach((i)=>{
+    if(i.classList.contains("art-1")){
+        i.addEventListener("click", function (){
+            console.log("Hi, I am article Ash")
+        });
+    }else if(i.classList.contains("art-2")){
+        i.addEventListener("click", function (){
+            console.log("Hi, I am article Fire")
+        });
+    }else if(i.classList.contains("art-3")){
+        i.addEventListener("click", function (){
+            console.log("Hi, I am article Water")
+        });
+    }else if(i.classList.contains("art-4")){
+        i.addEventListener("click", function (){
+            console.log("Hi, I am article Forest")
+        });
+    }
+})
+
